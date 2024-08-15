@@ -10,7 +10,7 @@ checkBtn.addEventListener("click", () => {
         alert("Please fill in a value");
     }
     else{
-        const input = textInput.value.replace(/\s/g,"");
+        const input = textInput.value.replace(/\s/g,"").toLowerCase();
         input.split('').forEach(char => {
             inputArray.push(char);
         });
