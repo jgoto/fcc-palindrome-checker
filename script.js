@@ -2,7 +2,6 @@ const checkBtn = document.getElementById("check-btn");
 const textInput = document.getElementById("text-input");
 const result = document.getElementById("resultText");
 const inputArray = [];
-let isPalindrome = false;
 
 /* Ensure user enters a value for the text input 
 when the submit button is clicked */
@@ -15,8 +14,8 @@ checkBtn.addEventListener("click", () => {
         input.split('').forEach(char => {
             inputArray.push(char);
         });
-        evaluatePalindrome(inputArray);
-        result.innerText = inputArray;
+        const isPalindrome = evaluatePalindrome(inputArray);
+        isPalindrome?result.innerText = textInput.value + " is a palindrome" : result.innerText = textInput.value + " is not a palindrome";
     }
 });
 
@@ -36,18 +35,19 @@ checkBtn.addEventListener("click", () => {
 
 
 function evaluatePalindrome(array){
+    let isEqual = false;
     console.log("checking to see if this is a palindrome");
     for(let i = 0; i < (array.length / 2); i++){
         console.log("checking " + i + " " + array[i] + array[array.length-i-1]);
         if(array[i] === array[array.length-i-1])
         {
-            isPalindrome = true;
+            isEqual = true;
         }
         else
         {
-            isPalindrome = false;
-            return;
+            isEqual = false;
+            break;
         }        
     }
-    isPalindrome?console.log("This is a palindrome"):console.log("This is not a palindrome");
+    return isEqual;
 }
