@@ -3,4 +3,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 85vh;
+}
+
+.container p{
+    width: 60%;
+    font-family: sans-serif;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+.dictionary{
+    font-style: normal;
+    font-weight: 700;
+}
+
+#result{
+    visibility: hidden;
 }
