@@ -7,7 +7,7 @@ const inputArray = [];
 when the submit button is clicked */
 checkBtn.addEventListener("click", () => {
     if(textInput.value===""){
-        alert("Please fill in a value");
+        alert("Please input a value");
     }
     else{
         const input = textInput.value.replace(/\s/g,"").toLowerCase();
@@ -16,23 +16,9 @@ checkBtn.addEventListener("click", () => {
         });
         const isPalindrome = evaluatePalindrome(inputArray);
         isPalindrome?result.innerText = textInput.value + " is a palindrome" : result.innerText = textInput.value + " is not a palindrome";
+        resetApplication();
     }
 });
-
-/* 
-1. Validate the text input
-2. convert the input to all lowercase and remove whitespace
-3. place each letter in an array
-4. check front and back, if the letters are the same continue 
-    otherwise the input is not a palindrome
-*/
-
-
-
-/** strip whitespace and place in array*/
-
-
-
 
 function evaluatePalindrome(array){
     let isEqual = false;
@@ -50,4 +36,11 @@ function evaluatePalindrome(array){
         }        
     }
     return isEqual;
+}
+
+function resetApplication(){
+    textInput.value ="";
+    while(inputArray.length>0){
+        inputArray.pop();
+    }
 }
