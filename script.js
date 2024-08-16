@@ -10,7 +10,7 @@ checkBtn.addEventListener("click", () => {
         alert("Please input a value");
     }
     else{
-        const input = textInput.value.replace(/\s/g,"").toLowerCase();
+        const input = textInput.value.replace(/[^a-zA-Z0-9]/g,"").toLowerCase();
         input.split('').forEach(char => {
             inputArray.push(char);
         });
