@@ -1,6 +1,6 @@
 const checkBtn = document.getElementById("check-btn");
 const textInput = document.getElementById("text-input");
-const result = document.getElementById("resultText");
+const result = document.getElementById("result-text");
 const inputArray = [];
 
 /* Ensure user enters a value for the text input 
@@ -44,3 +44,5 @@ function resetApplication(){
         inputArray.pop();
     }
 }
+
+// module.exports = evaluatePalindrome
