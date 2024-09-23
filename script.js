@@ -5,6 +5,7 @@ const inputArray = [];
 
 /* Ensure user enters a value for the text input 
 when the submit button is clicked */
+
 checkBtn.addEventListener("click", () => {
     if(textInput.value===""){
         alert("Please input a value");

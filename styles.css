@@ -4,6 +4,7 @@ body{
     justify-content: center;
     width: 100vw;
     height: 100vh;
+    background-color: ivory;
 }
 
 .container{
@@ -13,7 +14,7 @@ body{
     align-items: center;
     width: 60vw;
     height: 60vh;
-    background-color: antiquewhite;
+    background-color:aquamarine;
     border-radius: 10px;
 }
 
@@ -27,6 +28,10 @@ body{
 .dictionary{
     font-style: normal;
     font-weight: 700;
+}
+
+input{
+    background-color: ivory;
 }
 
 /*#result{
